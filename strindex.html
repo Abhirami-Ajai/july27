@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>60.Js program to print the index of specified character in a string? </h1>
+    <center>
+        <table>
+	   <tr>
+                <td>
+                    <h3>Enter the String</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="strchar"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="convert()">Convert</button>
+                </th>
+            </tr>
+           <tr>
+                <td>
+                    <h3> Index are</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="char"></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function convert() {
+            var string = document.getElementById("strchar").value;
+            var result = "";
+            for (var i = 0; i < string.length; i++) {
+                result += i + " ,";
+            }
+            document.getElementById("char").value = result;
+        }
+    </script>
+</body>
+
+</html>

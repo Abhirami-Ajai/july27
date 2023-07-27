@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>62.Js program to check the specified substring is the prefix of the given string? </h1>
+    <center>
+        <table>
+	   <tr>
+                <td>
+                    <h3>Enter the String</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str1"></td>
+            </tr>
+	    <tr>
+                <td>
+                    <h3>Enter the  substring</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str2"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="convert()">Check</button>
+                </th>
+            </tr>
+           <tr>
+                <td>
+                    <h3>Result</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str4"></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function convert() {
+          var str1,str2;
+          str1 = document.getElementById("str1").value;
+          str2 = document.getElementById("str2").value;
+          if( str1.startsWith(str2)) {
+		document.getElementById("str4").value="it is a prefix";
+	  }
+	  else {
+	        document.getElementById("str4").value="not a prefix";
+	  }
+      }     
+    </script>
+</body>
+
+</html>

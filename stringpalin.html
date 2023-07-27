@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>50.Progran to check whether a string is palindrome or not? </h1>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h3>Enter the String</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="palin()">Check</button>
+                </th>
+            </tr>
+           
+        </table>
+    </center>
+	<p id="palindrome"></p>
+    <script>
+        function palin() {
+            var inputString = document.getElementById("str").value;
+	    var reversedString = inputString .split('').reverse().join('');
+	    var isPalindrome = (inputString === reversedString );
+	    if (isPalindrome ) {
+	      document.getElementById("palindrome").innerHTML= "Palindrome";
+	    }
+	   else {
+	      document.getElementById("palindrome").innerHTML= " Not Palindrome";
+	   }
+        }
+    </script>
+</body>
+
+</html>

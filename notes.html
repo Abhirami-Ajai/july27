@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>35.Count Total Notes in an Amount</h1>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h3>Enter the Amount</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="amount"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="countNotes()">Count Notes</button>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Total Notes</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="totalNotes"></td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        function countNotes() {
+            var amount = parseInt(document.getElementById("amount").value);
+            var denominations = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
+            var notesCount = {};
+
+            for (var i = 0; i < denominations.length; i++) {
+                var denomination = denominations[i];
+                if (amount >= denomination) {
+                    notesCount[denomination] = Math.floor(amount / denomination);
+                    amount = amount % denomination;
+                }
+            }
+            var totalNotesString = '';
+            for (var key in notesCount) {
+                totalNotesString += notesCount[key] + ' notes of ' + key + ' Rs, ';
+            }
+            document.getElementById("totalNotes").value = totalNotesString.slice(0, -2);
+        }
+    </script>
+</body>
+
+</html>

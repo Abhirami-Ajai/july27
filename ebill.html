@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>40.Electricity Bill Calculator</h1>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h3>Enter the Units Consumed</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="units"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="calculateBill()">Calculate Bill</button>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Electricity Bill</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="billAmount"></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function calculateBill() {
+            var unitsConsumed = parseFloat(document.getElementById("units").value);
+            var billAmount = 0;
+            if (unitsConsumed <= 50) {
+                billAmount = unitsConsumed * 2.60;
+            } else if (unitsConsumed <= 100) {
+                billAmount = 50 * 2.60 + (unitsConsumed - 50) * 3.25;
+            } else if (unitsConsumed <= 200) {
+                billAmount = 50 * 2.60 + 50 * 3.25 + (unitsConsumed - 100) * 5.65;
+            } else {
+                billAmount = 50 * 2.60 + 50 * 3.25 + 100 * 5.65 + (unitsConsumed - 200) * 7.25;
+            }
+            if (unitsConsumed > 700) {
+                billAmount += billAmount * 0.005;
+            }
+
+            document.getElementById("billAmount").value = billAmount + " Rs";
+        }
+        
+    </script>
+</body>
+</html>

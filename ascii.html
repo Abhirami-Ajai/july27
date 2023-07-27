@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>52.Progran to print ASCII value of string characters? </h1>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h3>Enter the First String</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str1"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="ascii()">Check</button>
+                </th>
+            </tr>
+           <tr>
+                <td>
+                    <h3>ASCII value</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="value1"></td>
+            </tr>
+        </table>
+    </center>
+	<p id="palindrome"></p>
+    <script>
+        function ascii() {
+        var str1,len,i,string;
+        str1 = document.getElementById("str1").value;
+        len = str1.length - 1;
+        for ( i=0;i<=len;i++ ) {
+         string = str1.charCodeAt(i)
+          document.getElementById("value1").value = string;
+	   
+	    
+	  }  
+        }
+    </script>
+</body>
+
+</html>

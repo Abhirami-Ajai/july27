@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>63.Js program to replace a string with another string? </h1>
+    <center>
+        <table>
+	   <tr>
+                <td>
+                    <h3>Enter the String</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str1"></td>
+            </tr>
+	    <tr>
+                <td>
+                    <h3>Enter the String to replace</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str2"></td>
+            </tr>
+	    <tr>
+                <td>
+                    <h3>String after replaced</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str3"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="convert()">Convert</button>
+                </th>
+            </tr>
+           <tr>
+                <td>
+                    <h3>Result</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str4"></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function convert() {
+          var str,str1,str2,result;
+          str = document.getElementById("str1").value;
+          str1 = document.getElementById("str2").value;
+          str2 = document.getElementById("str3").value;
+          if ( str.includes(str1)) {
+             document.getElementById("str4").value= str.replaceAll(str1,str2);
+          }
+          else {
+              document.getElementById("str4").value= "string not found";
+          }
+      }     
+    </script>
+</body>
+
+</html>

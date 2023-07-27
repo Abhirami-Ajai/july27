@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>61.Js program to check the occurence of a given character in a string? </h1>
+    <center>
+        <table>
+	   <tr>
+                <td>
+                    <h3>Enter the String</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str1"></td>
+            </tr>
+	   <tr>
+                <td>
+                    <h3>Enter the Character</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="char"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="convert()">Check</button>
+                </th>
+            </tr>
+           <tr>
+                <td>
+                    <h3>Result</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="str4"></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function convert() {
+          var str1,str2,result,count=0;
+          str1 = document.getElementById("str1").value;
+          str2 = document.getElementById("char").value;
+          for(var i=0;i<=str1.length-1;i++) {
+		if(str1[i]==str2) {
+			count++;
+		}
+		else {
+			document.getElementById("str4").value="character not found";
+		}
+		document.getElementById("str4").value= count;
+	  }
+      }     
+    </script>
+</body>
+
+</html>

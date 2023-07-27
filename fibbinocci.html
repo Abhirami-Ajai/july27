@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>48.Program to print fibbinocci series upto N?</h1>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h3>Enter the Limit</h3>
+                </td>
+                <td>:</td>
+                <td><input type="textbox" id="num"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="calculate()">Check</button>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Fibbinocci series are</h3>
+                </td>
+                <td>:</td>
+                <td><input type="textbox" id="digits"></td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        function calculate() {
+            var num1 = parseInt(document.getElementById("num").value);
+            var n1 = 0, n2 = 1, nextTerm;
+            var fibSeries = "";
+             for (let i = 1; i <= num1; i++) {
+                fibSeries += n1 + " ";
+                nextTerm = n1 + n2;
+                n1 = n2;
+                n2 = nextTerm;
+            }
+            document.getElementById("digits").value = fibSeries;
+        }
+
+    </script>
+</body>
+</html>

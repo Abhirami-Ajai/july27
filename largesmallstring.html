@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>69. Js program to find the largest and smallest word in a string</h1>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h3>Enter the String</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="inputString"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="countCharacters()">Count</button>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Vowels</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="vowel"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Consonants</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="con" disabled></td>
+            </tr>
+            
+        </table>
+    </center>
+    <script>
+        function countCharacters() {
+            var inputString = document.getElementById("inputString").value;
+            var VowelsCount = 0;
+            var ConsonantCount = 0;
+	  for (var i = 0; i < inputString.length; i++) {
+                var char = inputString.charAt(i);
+
+                if (char =='a'||char =='e'||char =='i'||char =='o'||char =='u'||char =='A'||char =='E'||char =='I'||char =='O'||char =='U') {
+                    VowelsCount++;
+                } else {
+                    ConsonantCount++;
+                }
+            }
+
+            document.getElementById("vowel").value = VowelsCount;
+            document.getElementById("con").value = ConsonantCount;
+        }
+    </script>
+</body>
+
+</html>

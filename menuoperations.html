@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>49. Menu-Based Arithmetic Operations</h1>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h3>Enter the First Number</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="num1"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Enter the Second Number</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="num2"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="performOperation('ADD')">Add</button>
+                    <button type="button" onClick="performOperation('SUB')">Subtract</button>
+                    <button type="button" onClick="performOperation('MUL')">Multiply</button>
+                    <button type="button" onClick="performOperation('DIV')">Divide</button>
+                    <button type="button" onClick="performOperation('EXIT')">Exit</button>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Result</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="result"></td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        function performOperation(operation) {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = 0;
+
+            switch (operation) {
+                case 'ADD':
+                    result = num1 + num2;
+                    break;
+                case 'SUB':
+                    result = num1 - num2;
+                    break;
+                case 'MUL':
+                    result = num1 * num2;
+                    break;
+                case 'DIV':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        alert("Error: Division by zero is not allowed!");
+                        return;
+                    }
+                    break;
+                case 'EXIT':
+                    alert("Thank you!");
+                    return;
+                default:
+                    alert("Invalid operation selected!");
+                    return;
+            }
+
+            document.getElementById("result").value = result;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>66.Js program to count alphabets, digits, or special symbols in an input string</h1>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h3>Enter the String</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="inputString"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="countCharacters()">Count</button>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Alphabets</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="alphabets" disabled></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Digits</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="digits" disabled></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Special Symbols</h3>
+                </td>
+                <td>:</td>
+                <td><input type="text" id="specialSymbols" disabled></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function countCharacters() {
+            var inputString = document.getElementById("inputString").value;
+            var alphabetsCount = 0;
+            var digitsCount = 0;
+            var specialSymbolsCount = 0;
+	  for (var i = 0; i < inputString.length; i++) {
+                var char = inputString.charAt(i);
+
+                if ((char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z')) {
+                    alphabetsCount++;
+                } else if (char >= '0' && char <= '9') {
+                    digitsCount++;
+                } else {
+                    specialSymbolsCount++;
+                }
+            }
+
+            document.getElementById("alphabets").value = alphabetsCount;
+            document.getElementById("digits").value = digitsCount;
+            document.getElementById("specialSymbols").value = specialSymbolsCount;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: #B2BABB;
+        }
+
+        h1 {
+            color: #D68910;
+        }
+
+        h3 {
+            color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>46.Program to find volume and surface area of a sphere?</h1>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h3>Enter the radius</h3>
+                </td>
+                <td>:</td>
+                <td><input type="textbox" id="first"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">
+                    <button type="button" onClick="calculate()">Calculate</button>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Surface Area</h3>
+                </td>
+                <td>:</td>
+                <td><input type="textbox" id="sa"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Radius of Sphere</h3>
+                </td>
+                <td>:</td>
+                <td><input type="textbox" id="radius"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>volume</h3>
+                </td>
+                <td>:</td>
+                <td><input type="textbox" id="vol"></td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        function calculate() {
+            var r,pi=3.14,sa,vol,radius;
+            r= parseInt(document.getElementById("first").value);
+            sa=4*pi*r*r;
+            radius=(Math.sqrt(sa)/4*pi);
+            vol=4*pi*r*r*r;
+            document.getElementById("sa").value = sa;
+            document.getElementById("radius").value = radius;
+            document.getElementById("vol").value = vol;
+
+        }
+    
+    </script>
+</body>
+
+</html>
